@@ -533,16 +533,68 @@ span {
 
 
 
+/* _____?______________? */
 
 
 
 
 
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Aralarındaki boşluk */
+    justify-content: center; /* Ortalamak için */
+}
+
+.portfolio-box {
+    flex: 1 1 calc(33.333% - 20px); /* Her kutu eşit genişlikte */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-box img {
+    width: 100%; /* Genişliği kutuya göre ayarla */
+    height: 350px; /* Tüm img'ler aynı yüksekliğe sahip olacak */
+    object-fit: cover; /* Görüntüyü kırp ve uygun hale getir */
+}
 
 
 
 
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+    gap: 20px; /* Kutular arasındaki boşluk */
+}
 
+.portfolio-box img {
+    width: 100%; /* Kutunun genişliğini kapla */
+    height: 200px; /* Sabit yükseklik */
+    object-fit: cover; /* Görüntüyü kutuya göre kırp */
+}
+
+/* Orta ekranlar için (tabletler) */
+@media (max-width: 1024px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+    }
+
+    .portfolio-box img {
+        height: 180px; /* Daha küçük yükseklik */
+    }
+}
+
+/* Küçük ekranlar için (mobil) */
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Tek sütun */
+    }
+
+    .portfolio-box img {
+        height: 150px; /* Daha küçük yükseklik */
+    }
+}
 
 
 
