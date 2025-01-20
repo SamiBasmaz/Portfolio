@@ -539,12 +539,6 @@ span {
 
 
 
-.portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Aralarındaki boşluk */
-    justify-content: center; /* Ortalamak için */
-}
 
 .portfolio-box {
     flex: 1 1 calc(33.333% - 20px); /* Her kutu eşit genişlikte */
@@ -553,11 +547,6 @@ span {
     overflow: hidden;
 }
 
-.portfolio-box img {
-    width: 100%; /* Genişliği kutuya göre ayarla */
-    height: 350px; /* Tüm img'ler aynı yüksekliğe sahip olacak */
-    object-fit: cover; /* Görüntüyü kırp ve uygun hale getir */
-}
 
 
 
@@ -570,7 +559,7 @@ span {
 
 .portfolio-box img {
     width: 100%; /* Kutunun genişliğini kapla */
-    height: 200px; /* Sabit yükseklik */
+    height: 300px; /* Sabit yükseklik */
     object-fit: cover; /* Görüntüyü kutuya göre kırp */
 }
 
